@@ -1,7 +1,7 @@
 {
     "name": "@haibun/digital-auditing",
     "type": "module",
-    "version": "1.29.1",
+    "version": "1.33.0",
     "description": "digital auditing test using haibun",
     "main": "build/digital-auditing-stepper.js",
     "files": [
@@ -25,15 +25,14 @@
     "author": "",
     "license": "ISC",
     "dependencies": {
-        "@haibun/cli": "1.29.1",
-        "@haibun/core": "1.29.1",
-        "@haibun/domain-webpage": "1.29.1",
-        "@haibun/storage-fs": "1.29.1",
+        "@haibun/cli": "1.33.0",
+        "@haibun/core": "1.33.0",
+        "@haibun/domain-webpage": "1.33.0",
+        "@haibun/storage-fs": "1.33.0",
         "@haibun/storage-mem": "^1.33.0",
-        "@haibun/web-playwright": "1.29.1",
-        "@haibun/web-server-express": "1.29.1",
+        "@haibun/web-playwright": "1.33.0",
+        "@haibun/web-server-express": "1.33.0",
         "axe-core": "^4.6.2",
-        "haibun": "^0.0.4",
         "playwright": "1.30"
     },
     "devDependencies": {
