@@ -1,16 +1,16 @@
 import { Page } from "playwright";
 
-export async function getDigitalAuditingResults(page: Page, uri: string) {
+export async function getDigitalAuditingResults(page: Page) {
 
-  const serverAuditResults = await runServerAudits(page, uri);
-  const designAuditResults = await runDesignAudits(page, uri);
+  const serverAuditResults = await runServerAudits(page);
+  const designAuditResults = await runDesignAudits(page);
   return {
     server: serverAuditResults,
     design: designAuditResults
   };
 }
 
-async function runServerAudits(page: Page, uri: string ) {
+async function runServerAudits(page: Page) {
   const renewableEnergy = await checkRenewableEnergy(page);
   const carbonFootprint = await checkCarbonFootprint(page);
   const httpProtocol = await checkHttpProtocol (page);
@@ -32,7 +32,7 @@ async function runServerAudits(page: Page, uri: string ) {
   };
 }
 
-async function runDesignAudits(page: Page, uri: string ) {
+async function runDesignAudits(page: Page) {
   const webP = await checkWebP(page);
   const webM = await checkWebM(page);
   const lazyLoading = await checkLazyLoading (page);
