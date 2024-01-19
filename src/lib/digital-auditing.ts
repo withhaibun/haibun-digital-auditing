@@ -106,9 +106,9 @@ async function checkWebP(page: Page) {
 }
 
 async function checkWebM(page: Page) {
-  const usesWebPImages = (await page.$$eval('video', videos => videos.every(video => video.src.endsWith('.webm'))));
+  const usesWebMVideos = (await page.$$eval('video', videos => videos.every(video => video.src.endsWith('.webm'))));
   return {
-    result: usesWebPImages
+    result: usesWebMVideos
   };
 }
 
